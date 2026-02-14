@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-slate-50 dark:bg-slate-950;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent;
+}
+
+.card-glass {
+  @apply bg-white/50 dark:bg-slate-900/50 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/50 shadow-xl;
+}
