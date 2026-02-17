@@ -1,8 +1,2 @@
-fastapi
-uvicorn
-sqlalchemy
-pydantic
-openai
-supabase
-python-dotenv
-httpx
+mcp
+python-frontmatter
