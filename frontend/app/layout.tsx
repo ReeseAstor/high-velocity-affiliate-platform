@@ -28,6 +28,7 @@ export default function RootLayout({
                         <ul className="flex space-x-4 text-sm font-medium">
                             <li><a href="/" className="hover:text-blue-600">Dashboard</a></li>
                             <li><a href="/products" className="hover:text-blue-600">Products</a></li>
+                            <li><a href="/compare" className="hover:text-blue-600">Compare</a></li>
                             <li><a href="/content" className="hover:text-blue-600">Content</a></li>
                         </ul>
                     </nav>

@@ -73,3 +73,34 @@ class ClickResponse(BaseModel):
     created_at: datetime
     class Config:
         from_attributes = True
+
+
+# Comparison Schemas
+class ComparisonBase(BaseModel):
+    slug: str
+    title: str
+    subtitle: Optional[str] = None
+    meta_description: Optional[str] = None
+    product_a: dict
+    product_b: dict
+    winner: str = "A"
+    winner_reason: Optional[str] = None
+    categories: list = []
+    faqs: list = []
+    verdict_summary: Optional[str] = None
+    status: str = "active"
+
+class ComparisonCreate(ComparisonBase):
+    pass
+
+class ComparisonGenerateRequest(BaseModel):
+    product_a_name: str
+    product_b_name: str
+    extra_info: Optional[str] = ""
+
+class ComparisonResponse(ComparisonBase):
+    id: str
+    created_at: datetime
+    updated_at: Optional[datetime] = None
+    class Config:
+        from_attributes = True
