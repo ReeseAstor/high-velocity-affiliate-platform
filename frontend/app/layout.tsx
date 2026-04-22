@@ -8,6 +8,15 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SmartDeskHQ | Tech Reviews, Guides & Comparisons",
   description: "Expert tech reviews, buying guides, and product comparisons for smart home, gaming, and work-from-home tech.",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    other: {
+      "pinterest-site-verification": process.env.NEXT_PUBLIC_PINTEREST_VERIFICATION || undefined,
+    },
+  },
+  other: {
+    "pinterest-rich-pin": "true",
+  },
 };
 
 export default function RootLayout({
